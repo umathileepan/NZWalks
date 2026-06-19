@@ -1,0 +1,17 @@
+﻿using Microsoft.EntityFrameworkCore;
+using NZWalks.API.Model.Domain;
+
+namespace NZWalks.API.Data
+{
+    public class NZWalksDBContext : DbContext
+    {
+        public NZWalksDBContext(DbContextOptions dbContextOptions) : base(dbContextOptions)
+        {
+               
+        }
+
+        public DbSet<Difficulty> Difficulties { get; set; }
+        public DbSet<Regions> Regions { get; set; }
+        public DbSet<Walks> Walks { get; set; }
+    }
+}
